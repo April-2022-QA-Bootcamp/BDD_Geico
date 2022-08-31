@@ -1,0 +1,28 @@
+TDD - Test Driven Development. Selenium, TestNG
+TDD - Test-driven development is a software development process relying on software requirements being converted to test cases before software is fully developed
+BDD - Behaviour Driven Development
+ATDD - Acceptence Test Driven Development
+
+BDD - Cucumber/JBehave/Serenity/WebdriverIO/
+Cucumber -> Selenium, TestNG
+Feature file - name.feature
+
+Beahviour Driven Development is an approach where we define scenarios or scenario outline in a feature file using Gerkin syntax, such as vvv
+Gherkins syntax/language - Feature, Background, Scenario, Scenario Outline, Given, When, Then, And, Example
+# - Comments
+* Step Definitions - Steps defined in feature are connected to the accutal code with java class. CucumberOptions - glue: path of step definition
+
+ TDD		| 		BDD
+-------------------------------------
+test.java	|	feature file
+single test	| 	sceanrio
+data driven test|	scenario outline
+steps test	| 	steps in scenario / scenario outline
+			steps definition - assigne the steps to the steps in feature
+object class	| 	object class
+common class 	| 	common class
+base class	| 	base class / hook
+testrunner.xml	|	TestRunner.java - JUnit
+			cucumberOptions
+groups		|	tags
+
