@@ -1,21 +1,10 @@
 package geico.bdd.steps;
 
 import geico.bdd.base.BaseClass;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AutoSteps extends BaseClass{
-	
-	@Given("user is in the homepage")
-	public void user_is_in_the_homepage() {
-		homePage.getTitle();
-	}
-
-	@When("user input {int} in zipcode")
-	public void user_input_in_zipcode(Integer int1) {
-		homePage.inputZipCode(int1.toString());
-	}
 
 	@When("select auto from product")
 	public void select_auto_from_product() {
@@ -33,4 +22,18 @@ public class AutoSteps extends BaseClass{
 		aboutYou.getTitle("About You");
 	}
 
+	@Then("user will be in {string} page")
+	public void user_will_be_in_page(String string) {
+		aboutYou.getTitle(string);
+	}
+	
+	@Then("url of the page is {string}")
+	public void url_of_the_page_is(String string) {
+		aboutYou.getCurrentUrl(string);
+	}
+	
+	@Then("subtitle of the page is {string}")
+	public void subtitle_of_the_page_is(String string) {
+		aboutYou.getSubTitle(string);
+	}
 }
