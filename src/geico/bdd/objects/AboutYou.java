@@ -50,7 +50,7 @@ public class AboutYou {
 	}
 	
 	public void getSubTitle(String expectedSubTitle) {
-		assertEquals(commons.getText(subTitle), expectedSubTitle);
+		assertEquals(commons.getText(subTitle).replaceAll("[^a-zA-Z]",""), expectedSubTitle.replaceAll("[^a-zA-Z]",""));
 	}
 	
 	public void inputDOB(String dob) {
